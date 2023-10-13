@@ -20,7 +20,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static(__dirname + '/uploads'));
 
-mongoose.connect('mongodb+srv://shivankgupta1908:WU59FoJDnPF3blS2@cluster0.oayuhne.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp');
+mongoose.connect('mongodb+srv://<your_username>:<password>@cluster0.oayuhne.mongodb.net/?retryWrites=true&w=majority&appName=AtlasApp');
 
 app.post('/register', async (req,res) => {
   const {username,password} = req.body;
